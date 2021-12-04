@@ -1,0 +1,352 @@
+/* GENERAL*/
+
+/* 1) On enléve tous les réglages par défaut donc le padding et le margin afin de pouvoir controler notre page
+au pixel prés*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* 2) on indique une police unique à tous les éléments */
+
+body
+{
+	font-family: Arial ,sans-serif;
+	font-size: 15px;
+
+}
+h1, h2, h3, h4
+{
+	color: #444;
+}
+h1
+{
+	font-family: 'Crete Round', serif;
+	font-size: 45px;
+}
+h2
+{
+	font-size: 55px;
+}
+h3
+{
+	font-size: 30px;
+}
+h4
+{
+	font-size: 24px;
+}
+p
+{
+	line-height: 20px;
+	color: #777;
+}
+ul
+{
+	list-style: none; /*enléve les puces de la liste*/
+}
+a{
+	text-decoration: none; /* enléve le soulignement des liens*/
+	color: #444;
+}
+small
+{
+	font-size: 13px;
+	font-style: italic;
+}
+.wrapper /* conteneur invisible qui permet de centrer toutes nos sections*/
+{
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.orange
+{
+	color: #ff7a00;
+}
+.clear
+{
+	clear: both;
+}
+/*HEADER*/
+
+header
+{
+	height: 120px;
+}
+
+header h1
+{
+	float: left;
+	margin-top: 32px;
+}
+header nav
+{
+	float: right;
+	margin-top: 50px;
+}
+header nav ul li
+{
+	display: inline-block;
+	margin-right: 20px;
+	float: left;
+}
+header nav ul li a
+{
+	text-transform: uppercase; /* transforme en majuscule*/
+	font-weight: bold; /* mets en gras */
+}
+
+/* MAIN-IMAGE */
+#main-image
+{
+	height: 580px;
+	background: url(Image/main.jpg) center;
+}
+#main-image h2
+{
+	font-weight: normal; /* on enléve l'écriture en gras par défaut des h2*/
+	text-transform: uppercase;
+	text-align: center;
+	padding: 150px 0 40px 0;
+	margin-bottom: 20px;
+}
+.button-1
+{
+	display: block;/* car un lien <a> est par definition inline donc pour pouvoir faire une boite avec heigt et width on met inline*/
+	height:50px;
+	width: 120px;
+	background-color: #ff7a00;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+	line-height: 50px; /* on aurait pu faire ça avec padding, hauteur de la ligne d'écriture*/
+	text-align: center;
+	border-radius: 3px;
+}
+.button-1:hover
+{
+	background-color: #02b8dd;
+} 
+
+/*STEPS*/
+#steps ul
+{
+	margin: 80px 0;
+
+}
+#steps ul li
+{
+	width: 300px;
+	float: left; /* pour que chacun des élements de la liste soit aligné*/
+	padding-top: 140px; /* pour que les icones soit en haut du texte li */
+	text-align: center;
+	margin-right: 10px; /*pour éloigner un peu les textes de ses voisins*/
+
+}
+#steps h4
+{
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+#steps p
+{
+	margin-bottom: 20px;
+}
+#step-1
+{
+	background: url(Image/steps-icon-1.png) no-repeat top center; /*quand l'image est petite elle est répété dans toute la boite*/
+
+}
+#step-2
+{
+	background: url(Image/steps-icon-2.png) no-repeat top center;
+}
+#step-3
+{
+	background: url(Image/steps-icon-3.png) no-repeat top center;
+}
+/*POSSIBILITIES*/
+
+#possibilities
+{
+	background-color: #efefef;
+	padding: 60px 0;
+}
+#possibilities article
+{
+	height: 270px;
+	width: 460px;
+	float: left;
+	border-radius: 10px;
+}
+#possibilities article:first-child /*pour ne dépalcer que le 1er article et ne pas mettre de marge dans le 2nd*/
+{
+	margin-right: 20px;
+}
+.overlay
+{
+	background: rgba(255, 255, 255,0.95); /*pour faire le transparent sur l'image*/
+	height: 100%;
+	width: 190px; 
+	padding: 20px;
+	border-radius:10px 0 0 10px; /* Pour choissir uniquement les bords haut et bas tourne dans le sens d'une aiguille d'une montre */
+	text-align: center;
+	box-sizing: border-box;
+}
+article h4
+{
+	border-bottom: 1px solid #ddd; /*pour faire la barre de séparation entre le texte et le titre*/
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#possibilities p
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.button-2
+{
+	color: #fff;
+	background-color: #ff7a00;
+	padding: 6px 20px;
+	border-radius: 3px;
+}
+.button-2:hover
+{
+	background-color: #02b8dd;
+}
+
+/* CONTACT */
+
+#contact
+{
+	padding: 60px 0;
+	text-align: center;
+}
+#contact h3
+{
+	width: 400px;
+	text-transform: uppercase;
+	margin:0 auto 20px;
+	border-bottom: 1px solid #02b8dd;
+	padding-bottom: 20px;
+
+}
+form 
+{
+	margin: 60px 0 20px;
+}
+label
+{
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 10px;
+	color: #777;
+}
+
+input[type="text"] /*permet de selectionner uniquement les input nom et email*/
+{
+	padding: 10px;
+	margin-right: 20px;
+	font-size: 20px;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+}
+.button-3
+{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 11px;
+	background-color:#02b8dd ;
+	border-style: none; /* pour enlever la bordure par défaut du bouton submit*/
+	border-radius: 10px;
+}
+.button-3:hover
+{
+	background-color: #444;
+}
+
+/*FOOTER*/
+
+footer
+{
+	height: 260px;
+	background-color: #444;
+}
+footer h1
+{
+	color: #fff;
+	text-align: center;
+	padding-top: 80px;
+}
+.copyright
+{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 30px;
+	color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
